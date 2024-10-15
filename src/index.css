@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.link-container li:hover {
+    color: #1FA887;
+}
+
+@media (max-width:770px) {
+    .hero_section {
+        padding: 80px 20px;
+    }
+
+    .link-container {
+        width: 0;
+        height: 100vh;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: #0D1413;
+        padding-top: 20px;
+        text-align: right;
+        margin-top: 0px;
+        transition: width .3s ease-in;
+    }
+
+    .link-container.nav_opened {
+        display: block;
+        width: 220px;
+    }
+
+    .heading {
+        font-size: 52px;
+    }
+
+    .link-container li {
+        margin-bottom: 25px;
+        margin-right: 25px;
+    }
+
+    .close {
+        display: block;
+        position: fixed;
+        font-size: 25px;
+        font-weight: bolder;
+        top: 14px;
+        color: white;
+    }
+}
+
+ @media (max-width:550px) {
+    #team{
+        padding: 20px;
+    }
+   .team_card{
+    width: 100%;
+    /* padding: 20px; */
+   }
+} 
