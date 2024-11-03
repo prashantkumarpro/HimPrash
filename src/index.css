@@ -12,6 +12,9 @@
     color: #1FA887;
 }
 
+
+  
+  /* START RESPONSIVE */
 @media (max-width:770px) {
     .hero_section {
         padding: 80px 20px;

@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Amazon from './assets/Amazon clone.png'
 import logo from './assets/logo.webp'
-import './App.css'
+import togood from './assets/togood.png'
+import movies4u from './assets/movies4u.png'
 import { TfiLinkedin } from "react-icons/tfi";
 import { FaArrowUp, FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { MdArrowOutward } from "react-icons/md";
 import { RiFacebookCircleFill } from "react-icons/ri";
 import SolutionsCard from "./components/SolutionsCard";
+import './App.css'
 
 
 const App = () => {
@@ -18,6 +20,8 @@ const App = () => {
       <Testimonials />
       <Portfolio />
       <Team />
+      <WebSolutionsPricing />
+      <Contact />
       <Footer />
     </div>
   );
@@ -123,13 +127,8 @@ const Nav = () => {
 
 const Hero = () => (
   <section className="hero_section bg-[#0D1413] text-white text-center p-20">
-    <h1 className="heading text-8xl leading-12 font-bold">We only <span className="text-[#1FA887]">build</span>
-      <br />
-      what we are really
-      <br />
-      really good at.
+    <h1 className="heading text-8xl leading-12 font-bold">Your Growth, <span className="text-[#1FA887]">Our Mission</span>
     </h1>
-
   </section>
 );
 
@@ -158,16 +157,26 @@ const Testimonial = ({ quote, name }) => (
 
 const Portfolio = () => (
   <section id="portfolio" className="text-center py-16 px-5">
-    <h2 className="text-4xl font-bold mb-10 text-[#27E0B3]">Our Projects</h2>
+    <h2 className="text-4xl font-bold mb-10 text-[#27E0B3]">See Our Results</h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       <ProjectCard
         title="Amazon Clone"
         imageUrl={Amazon}
         description="An e-commerce platform designed to boost sales and improve user experience."
-        link="https://amazon-five-amber.vercel.app/"
+        link={"https://amazon-five-amber.vercel.app/"}
       />
-      <ProjectCard title="Project 2" imageUrl={Amazon} description="An e-commerce platform designed to boost sales and improve user experience." />
-      <ProjectCard title="Project 3" imageUrl={Amazon} description="A social media app that connects users through shared interests." />
+      <ProjectCard title="Two Good.Co"
+        imageUrl={togood}
+        description="An e-commerce platform designed to boost sales and improve user experience.
+        "
+        link={"https://two-good-co-sigma.vercel.app/"}
+      />
+
+      <ProjectCard title="Movies4U"
+        imageUrl={movies4u}
+        description="A  video streaming web app."
+        link={"https://movies4-u-sage.vercel.app/"}
+      />
     </div>
   </section>
 );
@@ -175,17 +184,19 @@ const Portfolio = () => (
 const ProjectCard = ({ title, imageUrl, description, link }) => (
   <div className="bg-[#2C2C2C] rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 max-w-sm mx-auto my-4">
     {imageUrl && (
-      <a href={link} target="_blank" rel="noreferrer">
+      <a href={link} target="_blank" rel="noreferrer"
+        className="w-full h-96"
+      >
         <img
           src={imageUrl}
           alt={title}
-          className="w-full h-54 object-cover rounded-t-lg"
+          className="object-center rounded-t-lg"
         />
       </a>
     )}
     <div className="p-4  text-left">
       <h3 className="text-xl font-bold mb-2 text-white ">{title}</h3>
-      <p className="text-white text-sm">{description}</p>
+      <p className="text-gray-400 text-sm">{description}</p>
     </div>
     <div className="flex justify-between items-center p-4 border-t border-gray-700">
       <a
@@ -242,16 +253,131 @@ const TeamCard = ({ name, role, description, imageUrl }) => (
 );
 
 const Contact = () => (
-  <section id="contact" className=" py-14 sm:text-left m-auto">
-    <p className="text-white">
-      If you have any questions or would like to discuss your project, feel free to{" "}
-      <a href="mailto:dev.prashant.kumaar@gmail.com" className="text-[#1FA887] font-bold">
-        dev.prashant.kumaar@gmail.com
-      </a>{" "}
-
-    </p>
+  <section id="contact" className="w-full p-12">
+    <div className="contact-container">
+      <div className="contact-heading text-gray-300">
+        <h1 className="font-bold text-[4.5vw] uppercase leading-[4vw] tracking-[-1px]">
+          Have a project in mind?
+        </h1>
+        <h1 className="font-bold text-[4.5vw] uppercase leading-[4vw] tracking-[-1px]">
+          Or you want to say hello,
+        </h1>
+        <h1 className="font-bold text-[4.5vw] uppercase leading-[4vw] tracking-[-1px]">
+          <span className="text-[#1FA887]">Get In touch</span> with me.
+        </h1>
+      </div>
+    </div>
+    <div className="links flex flex-col justify-center items-center w-full py-4">
+      <div className="part-one w-full">
+        <form className="max-w-xl w-full mx-auto py-12 text-white">
+          <div className="form-group mb-4">
+            <label htmlFor="name" className="block mb-1 font-bold text-lg">
+              Name:
+            </label>
+            <input type="text" id="name" name="name" required className="w-full p-2 outline-none border border-[#1FA887] text-[#333]" />
+          </div>
+          <div className="form-group mb-4">
+            <label htmlFor="email" className="block mb-1 font-bold text-lg">
+              Email:
+            </label>
+            <input type="email" id="email" name="email" required className="w-full p-2 outline-none border border-[#1FA887]  text-[#333]" />
+          </div>
+          <div className="form-group mb-4">
+            <label htmlFor="message" className="block mb-1 font-bold text-lg">
+              Message:
+            </label>
+            <textarea id="message" name="message" rows="4" className="w-full p-2 outline-none border border-[#1FA887] resize-y  text-[#333]"></textarea>
+          </div>
+          <div className="form-group">
+            <input type="submit" value="Submit" className="w-full p-2 rounded-md font-bold text-black uppercase cursor-pointer bg-[#1FA887] transition duration-300 ease-in-out hover:bg-gray-300 hover:text-[#333]" />
+          </div>
+        </form>
+      </div>
+    </div>
   </section>
 );
+
+const WebSolutionsPricing = () => {
+  const plans = [
+    {
+      name: "Frontend Development",
+      price: "$500",
+      description: "Perfect for visually stunning and responsive interfaces.",
+      features: [
+        "Custom UI/UX Design",
+        "Responsive Layout",
+        "Animation and Effects",
+        "SEO Optimization",
+      ],
+      popular: false,
+    },
+    {
+      name: "Backend Development",
+      price: "$700",
+      description: "Ideal for powerful, secure, and scalable server solutions.",
+      features: [
+        "API Development",
+        "Database Integration",
+        "Authentication & Authorization",
+        "Data Management",
+      ],
+      popular: true,
+    },
+    {
+      name: "Fullstack Development",
+      price: "$1200",
+      description: "Complete end-to-end solutions for web applications.",
+      features: [
+        "Frontend & Backend Integration",
+        "Database Design & Management",
+        "Full API Support",
+        "Deployment & Maintenance",
+      ],
+      popular: false,
+    },
+  ];
+
+  return (
+    <div className="bg-[#0D1413]">
+      <h1 className="text-center py-8 text-3xl text-white font-semibold ">WEB PACKAGES</h1>
+      <div className="flex flex-col md:flex-row justify-center items-center gap-8 p-8 bg-[#0D1413]">
+
+        {plans.map((plan, index) => (
+
+          <div
+            key={index}
+            className={`relative max-w-xs w-full rounded-lg shadow-lg p-6 text-center transition-transform duration-300 hover:scale-105 ${plan.popular ? "bg-[#1FA887] text-[white]" : "bg-white text-gray-800"
+              }`}
+          >
+            {plan.popular && (
+              <span className="absolute top-0 right-0 bg-yellow-400 text-yellow-900 text-sm font-semibold px-3 py-1 rounded-bl-lg">
+                Most Popular
+              </span>
+            )}
+            <h2 className="text-2xl font-semibold mt-4">{plan.name}</h2>
+            <p className="text-lg italic mb-4">{plan.description}</p>
+            <p className="text-4xl font-bold my-4">{plan.price}</p>
+            <ul className="space-y-2 mb-6">
+              {plan.features.map((feature, idx) => (
+                <li key={idx} className="text-sm">
+                  {feature}
+                </li>
+              ))}
+            </ul>
+            <button
+              className={`w-full py-2 rounded-lg font-semibold ${plan.popular
+                ? "bg-yellow-400 text-yellow-900 hover:bg-yellow-500"
+                : "bg-blue-600 text-white hover:bg-blue-700"
+                }`}
+            >
+              Choose Plan
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 const Footer = () => (
   <footer className="text-white bg-[#0D1413] text-center ">
@@ -295,7 +421,7 @@ const Footer = () => (
             <a href="#contact"><h1 className="text-lg sm:text-[1.4rem] leading-6 sm:leading-[1.8] font-medium">Contact</h1></a>
           </div>
           <div className="middle_part text-left mb-6 sm:mb-0">
-            <Contact />
+
           </div>
           <div className="right_part text-right">
             <a href="#testimonials">
