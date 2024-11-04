@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Amazon from './assets/Amazon clone.png'
 import logo from './assets/logo.webp'
 import togood from './assets/togood.png'
-import siliSalon from './assets/siliSalon.png'
+import siliSalon from './assets/silisalon.png'
 import ProfileStore from './assets/ProfileStore.jpg'
 import landingPage from './assets/LandingPage.png'
 import PrashantImg from './assets/Prashant.png'
