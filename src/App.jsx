@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import Amazon from './assets/Amazon clone.png'
 import logo from './assets/logo.webp'
 import togood from './assets/togood.png'
+import siliSalon from './assets/siliSalon.png'
+import ProfileStore from './assets/ProfileStore.jpg'
+import landingPage from './assets/LandingPage.png'
+import PrashantImg from './assets/Prashant.png'
 import movies4u from './assets/movies4u.png'
 import { TfiLinkedin } from "react-icons/tfi";
 import { FaArrowUp, FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
@@ -19,8 +23,8 @@ const App = () => {
       <SolutionsCard />
       <Testimonials />
       <Portfolio />
-      <Team />
       <WebSolutionsPricing />
+      <Team />
       <Contact />
       <Footer />
     </div>
@@ -98,6 +102,11 @@ const Nav = () => {
             </a>
           </li>
           <li>
+            <a href="#price" className="font-bold">
+              Price
+            </a>
+          </li>
+          <li>
             <a href="#team" className="font-bold">
               Team
             </a>
@@ -160,10 +169,23 @@ const Portfolio = () => (
     <h2 className="text-4xl font-bold mb-10 text-[#27E0B3]">See Our Results</h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       <ProjectCard
-        title="Amazon Clone"
-        imageUrl={Amazon}
-        description="An e-commerce platform designed to boost sales and improve user experience."
-        link={"https://amazon-five-amber.vercel.app/"}
+        title="Sili Salon"
+        imageUrl={siliSalon}
+        description="A salon website designed to boost sales and improve user experience."
+        link={"https://silisalon.vercel.app/"}
+      />
+
+      <ProjectCard title="Profile store"
+        imageUrl={ProfileStore}
+        description="A profile stroe website.
+        "
+        link={"https://profile-store-mini-social-media.onrender.com/profiles"}
+      />
+       <ProjectCard
+        title="Landing Page"
+        imageUrl={landingPage}
+        description="A landing page"
+        link={"https://landing-page-coral-mu.vercel.app/"}
       />
       <ProjectCard title="Two Good.Co"
         imageUrl={togood}
@@ -177,6 +199,13 @@ const Portfolio = () => (
         description="A  video streaming web app."
         link={"https://movies4-u-sage.vercel.app/"}
       />
+      <ProjectCard
+        title="Amazon Clone"
+        imageUrl={Amazon}
+        description="An e-commerce platform designed to boost sales and improve user experience."
+        link={"https://amazon-five-amber.vercel.app/"}
+      />
+     
     </div>
   </section>
 );
@@ -223,7 +252,7 @@ const Team = () => (
           name="Prashant Kumar"
           role="Frontend Developer"
           description="Specializing in creating interactive and responsive user interfaces."
-          imageUrl="https://avatars.githubusercontent.com/u/133010547?v=4"
+          imageUrl={PrashantImg}
         />
       </a>
       <a href="https://himansuwebportfolio.netlify.app/" target="_blank"
@@ -241,7 +270,7 @@ const Team = () => (
 
 const TeamCard = ({ name, role, description, imageUrl }) => (
   <div className="team_card bg-white text-black  rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105  w-[512px] p-6 h-54 flex justify-between items-center gap-5">
-    <div className="w-1/4 rounded-full overflow-hidden ">
+    <div className="w-1/4 rounded-full overflow-hidden bg-black">
       <img src={imageUrl} alt={name} className="w-full h-full object-cover " />
     </div>
     <div className="text-left">
@@ -263,7 +292,7 @@ const Contact = () => (
           Or you want to say hello,
         </h1>
         <h1 className="font-bold text-[4.5vw] uppercase leading-[4vw] tracking-[-1px]">
-          <span className="text-[#1FA887]">Get In touch</span> with me.
+          <span className="text-[#1FA887]">Get In touch</span> with us.
         </h1>
       </div>
     </div>
@@ -338,7 +367,7 @@ const WebSolutionsPricing = () => {
   ];
 
   return (
-    <div className="bg-[#0D1413]">
+    <section id="price" className="bg-[#0D1413]">
       <h1 className="text-center py-8 text-3xl text-white font-semibold ">WEB PACKAGES</h1>
       <div className="flex flex-col md:flex-row justify-center items-center gap-8 p-8 bg-[#0D1413]">
 
@@ -367,7 +396,7 @@ const WebSolutionsPricing = () => {
             <button
               className={`w-full py-2 rounded-lg font-semibold ${plan.popular
                 ? "bg-yellow-400 text-yellow-900 hover:bg-yellow-500"
-                : "bg-blue-600 text-white hover:bg-blue-700"
+                : "bg-[#1FA887] text-slate-600 hover:bg-[#58cfb3]"
                 }`}
             >
               Choose Plan
@@ -375,7 +404,7 @@ const WebSolutionsPricing = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -390,12 +419,14 @@ const Footer = () => (
           <span className="inline-block tracking-wider">HimPrash.</span>
         </h1>
         <div className="Let_go bg-black w-fit py-2 px-4 sm:py-3 sm:px-6 mt-6 sm:mt-10 border-[1px] border-solid border-black">
-          <h1 className="text-sm sm:text-[0.99rem] text-[#1FA887] font-medium flex flex-row items-center gap-5 ">
-            <span className="inline-block">LET'S GO</span>
-            <span className="inline-block text-xl sm:text-[1.2rem] font-extrabold hover:rotate-[45deg]">
-              <MdArrowOutward />
-            </span>
-          </h1>
+          <a href="#contact">
+            <h1 className="text-sm sm:text-[0.99rem] text-[#1FA887] font-medium flex flex-row items-center gap-5 ">
+              <span className="inline-block">LET'S GO</span>
+              <span className="inline-block text-xl sm:text-[1.2rem] font-extrabold hover:rotate-[45deg]">
+                <MdArrowOutward />
+              </span>
+            </h1>
+          </a>
         </div>
       </div>
       <div className="right w-full sm:w-1/2 flex flex-col sm:flex-row items-start justify-between px-10 sm:px-20 py-10 sm:py-20">
@@ -417,7 +448,7 @@ const Footer = () => (
             <a href="#"><h1 className="text-lg sm:text-[1.4rem] leading-6 sm:leading-[1.8] font-medium">Home</h1></a>
             <a href="#services"><h1 className="text-lg sm:text-[1.4rem] leading-6 sm:leading-[1.8] font-medium">Services</h1></a>
             <a href="#portfolio"> <h1 className="text-lg sm:text-[1.4rem] leading-6 sm:leading-[1.8] font-medium">About</h1></a>
-            <a href="#"><h1 className="text-lg sm:text-[1.4rem] leading-6 sm:leading-[1.8] font-medium">Team</h1></a>
+            <a href="#team"><h1 className="text-lg sm:text-[1.4rem] leading-6 sm:leading-[1.8] font-medium">Team</h1></a>
             <a href="#contact"><h1 className="text-lg sm:text-[1.4rem] leading-6 sm:leading-[1.8] font-medium">Contact</h1></a>
           </div>
           <div className="middle_part text-left mb-6 sm:mb-0">
@@ -431,14 +462,14 @@ const Footer = () => (
             <a href="#portfolio"> <h1 className="text-lg sm:text-[1.4rem] leading-6 sm:leading-[1.8] font-medium cursor-pointer">
               Portfolio
             </h1></a>
-            <a href="#"> <h1 className="text-lg sm:text-[1.4rem] leading-6 sm:leading-[1.8] font-medium cursor-pointer">
+            <a href="#portfolio"> <h1 className="text-lg sm:text-[1.4rem] leading-6 sm:leading-[1.8] font-medium cursor-pointer">
               Resources
             </h1></a>
             <a href="#contact"> <h1 className="text-lg sm:text-[1.4rem] leading-6 sm:leading-[1.8] font-medium cursor-pointer">
               Contact
             </h1></a>
-            <a href="#">  <h1 className="text-lg sm:text-[1.4rem] leading-6 sm:leading-[1.8] font-medium cursor-pointer">
-              Careers
+            <a href="#price">  <h1 className="text-lg sm:text-[1.4rem] leading-6 sm:leading-[1.8] font-medium cursor-pointer">
+              Price
             </h1></a>
           </div>
         </div>
@@ -480,7 +511,5 @@ const Footer = () => (
     </div>
   </footer >
 );
-
-
 
 export default App;
