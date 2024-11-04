@@ -330,7 +330,7 @@ const WebSolutionsPricing = () => {
   const plans = [
     {
       name: "Frontend Development",
-      price: "$500",
+      price: "$5",
       description: "Perfect for visually stunning and responsive interfaces.",
       features: [
         "Custom UI/UX Design",
@@ -342,7 +342,7 @@ const WebSolutionsPricing = () => {
     },
     {
       name: "Backend Development",
-      price: "$700",
+      price: "$7",
       description: "Ideal for powerful, secure, and scalable server solutions.",
       features: [
         "API Development",
@@ -354,7 +354,7 @@ const WebSolutionsPricing = () => {
     },
     {
       name: "Fullstack Development",
-      price: "$1200",
+      price: "$10",
       description: "Complete end-to-end solutions for web applications.",
       features: [
         "Frontend & Backend Integration",
@@ -385,7 +385,7 @@ const WebSolutionsPricing = () => {
             )}
             <h2 className="text-2xl font-semibold mt-4">{plan.name}</h2>
             <p className="text-lg italic mb-4">{plan.description}</p>
-            <p className="text-4xl font-bold my-4">{plan.price}</p>
+            <p className="text-4xl font-bold my-4">{plan.price}<sub className="font-[600] opacity-50">/hr</sub></p>
             <ul className="space-y-2 mb-6">
               {plan.features.map((feature, idx) => (
                 <li key={idx} className="text-sm">
