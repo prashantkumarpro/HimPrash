@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaReact, FaNodeJs, FaDatabase } from 'react-icons/fa';
 import Amazon from './assets/Amazon clone.png'
 import logo from './assets/logo.webp'
 import togood from './assets/togood.png'
@@ -21,6 +22,7 @@ const App = () => {
       <Nav />
       <Hero />
       <SolutionsCard />
+      <AboutUsCard />
       <Testimonials />
       <Portfolio />
       <WebSolutionsPricing />
@@ -86,14 +88,19 @@ const Nav = () => {
         >
           <span className={`close ${menuOpen ? "block" : "hidden"} cursor-pointer`}
             onClick={toggleMenu}>✕</span>
-          <li className="hover:text-[#1FA887]">
-            <a href="#services" className="font-bold">
-              Services
+          <li>
+            <a href="#" className="font-bold">
+              Home
             </a>
           </li>
           <li>
-            <a href="#testimonials" className="font-bold">
-              Testimonials
+            <a href="#team" className="font-bold">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#services" className="font-bold">
+              Services
             </a>
           </li>
           <li>
@@ -102,18 +109,23 @@ const Nav = () => {
             </a>
           </li>
           <li>
-            <a href="#price" className="font-bold">
-              Price
+            <a href="#testimonials" className="font-bold">
+              Testimonials
             </a>
           </li>
           <li>
-            <a href="#team" className="font-bold">
-              Team
+            <a href="#price" className="font-bold">
+              Pricing
             </a>
           </li>
           <li>
             <a href="#contact" className="font-bold">
               Contact
+            </a>
+          </li>
+          <li>
+            <a href="" className="font-bold">
+              FAQ
             </a>
           </li>
           <div className={`social_links ${menuOpen ? 'block' : 'hidden'} flex justify-end items-center mr-5 gap-5`}>
@@ -135,15 +147,50 @@ const Nav = () => {
 };
 
 const Hero = () => (
-  <section className="hero_section bg-[#0D1413] text-white text-center p-20">
-    <h1 className="heading text-8xl leading-12 font-bold">Your Growth, <span className="text-[#1FA887]">Our Mission</span>
-    </h1>
+  <section className="hero_section bg-[#0D1413] text-white text-center  py-20 px-4 ">
+    <div className="w-full  flex flex-col justify-center items-center gap-8">
+
+      <div className="hero_intro text-left px-8 py-6">
+        <h1 className="hero_intro_text text-[3rem] leading-[2.8rem]"><span className="text-[10vw] tracking-tighter">In</span> a world that's going ditital, <br />your business should too.</h1>
+      </div>
+      <div className="hero_intro text-right px-8 py-6">
+        <h1 className="hero_intro_text text-[3rem] leading-[2.8rem]">Invest once, and enjoy the benefits or our comprehensive digital solution.</h1>
+      </div>
+    </div>
   </section>
 );
 
+
+const AboutUsCard = () => {
+  return (
+    <div className="flex items-center justify-center min-h-[100vh] bg-transparent p-6">
+      <div className=" w-[98%] rounded-2xl shadow-xl p-8 transform hover:scale-105 transition-transform duration-300">
+        <h2 className="text-3xl font-bold text-[#1FA887] mb-12 text-left">About Us</h2>
+
+        <div className="flex items-center justify-center space-x-3 mb-12">
+          <FaReact className="text-blue-500 text-3xl" />
+          <FaNodeJs className="text-green-500 text-3xl" />
+          <FaDatabase className="text-indigo-500 text-3xl" />
+        </div>
+
+        <p className="text-white opacity-90 text-lg leading-relaxed mb-12">
+          We're <span className="font-bold text-[#1FA887]">Himansu</span> & <span className="font-bold text-[#1FA887]">Prashant</span>, two developers dedicated to bringing your ideas to life.
+          <span className="font-semibold text-[#1FA887]"> Prashant</span> focuses on building beautiful, user-friendly websites with <span className="font-extrabold">React</span> and <span className="font-extrabold">Tailwind CSS</span>.
+          <span className="font-semibold text-[#1FA887]"> Himansu</span> handles the backend using <span className="font-extrabold">Node.js</span> and <span className="font-extrabold">PostgreSQL</span> to ensure smooth performance.
+        </p>
+
+        <p className="text-white text-lg opacity-90 leading-relaxed mb-12">
+          Together, we create websites and apps that are easy to use, impactful, and scalable. From clean designs to powerful backends, we combine our skills to help your business grow.
+        </p>
+
+      </div>
+    </div>
+  );
+}
+
 const Testimonials = () => (
   <section id="testimonials" className=" text-center py-16">
-    <h2 className="text-4xl font-bold mb-10 text-white">What Our Clients Say</h2>
+    <h2 className="text-4xl font-bold mb-10 text-white">What Our Clients Are Saying</h2>
     <div className="max-w-2xl mx-auto">
       <Testimonial
         quote="Prashant and Himanshu built our website with incredible attention to detail. Highly recommended!"
@@ -181,7 +228,7 @@ const Portfolio = () => (
         "
         link={"https://profile-store-mini-social-media.onrender.com/profiles"}
       />
-       <ProjectCard
+      <ProjectCard
         title="Landing Page"
         imageUrl={landingPage}
         description="A landing page"
@@ -205,7 +252,7 @@ const Portfolio = () => (
         description="An e-commerce platform designed to boost sales and improve user experience."
         link={"https://amazon-five-amber.vercel.app/"}
       />
-     
+
     </div>
   </section>
 );
@@ -252,7 +299,7 @@ const Team = () => (
           name="Prashant Kumar"
           role="Frontend Developer"
           description="Specializing in creating interactive and responsive user interfaces."
-          imageUrl={PrashantImg}
+          imageUrl={"https://avatars.githubusercontent.com/u/133010547?s=96&v=4"}
         />
       </a>
       <a href="https://himansuwebportfolio.netlify.app/" target="_blank"
@@ -281,101 +328,82 @@ const TeamCard = ({ name, role, description, imageUrl }) => (
   </div>
 );
 
-const Contact = () => (
-  <section id="contact" className="w-full p-12">
-    <div className="contact-container">
-      <div className="contact-heading text-gray-300">
-        <h1 className="font-bold text-[4.5vw] uppercase leading-[4vw] tracking-[-1px]">
-          Have a project in mind?
-        </h1>
-        <h1 className="font-bold text-[4.5vw] uppercase leading-[4vw] tracking-[-1px]">
-          Or you want to say hello,
-        </h1>
-        <h1 className="font-bold text-[4.5vw] uppercase leading-[4vw] tracking-[-1px]">
-          <span className="text-[#1FA887]">Get In touch</span> with us.
-        </h1>
-      </div>
-    </div>
-    <div className="links flex flex-col justify-center items-center w-full py-4">
-      <div className="part-one w-full">
-        <form className="max-w-xl w-full mx-auto py-12 text-white">
-          <div className="form-group mb-4">
-            <label htmlFor="name" className="block mb-1 font-bold text-lg">
-              Name:
-            </label>
-            <input type="text" id="name" name="name" required className="w-full p-2 outline-none border border-[#1FA887] text-[#333]" />
-          </div>
-          <div className="form-group mb-4">
-            <label htmlFor="email" className="block mb-1 font-bold text-lg">
-              Email:
-            </label>
-            <input type="email" id="email" name="email" required className="w-full p-2 outline-none border border-[#1FA887]  text-[#333]" />
-          </div>
-          <div className="form-group mb-4">
-            <label htmlFor="message" className="block mb-1 font-bold text-lg">
-              Message:
-            </label>
-            <textarea id="message" name="message" rows="4" className="w-full p-2 outline-none border border-[#1FA887] resize-y  text-[#333]"></textarea>
-          </div>
-          <div className="form-group">
-            <input type="submit" value="Submit" className="w-full p-2 rounded-md font-bold text-black uppercase cursor-pointer bg-[#1FA887] transition duration-300 ease-in-out hover:bg-gray-300 hover:text-[#333]" />
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-);
+
 
 const WebSolutionsPricing = () => {
   const plans = [
     {
-      name: "Frontend Development",
-      price: "$5",
-      description: "Perfect for visually stunning and responsive interfaces.",
+      name: "Basic Website",
+      price: "₹5,000 / $60",
+      priceIn$: "$60",
+      description: "-Perfect for personal websites, small businesses, or portfolio sites.",
       features: [
-        "Custom UI/UX Design",
-        "Responsive Layout",
-        "Animation and Effects",
-        "SEO Optimization",
+        "1-page design",
+        "Custom layout and branding",
+        "Basic SEO setup",
+        "Contact form integration",
+        "Mobile responsive",
+        "Delivery time: 5-7 days",
       ],
       popular: false,
     },
     {
-      name: "Backend Development",
-      price: "$7",
-      description: "Ideal for powerful, secure, and scalable server solutions.",
+      name: "Premium Website",
+      price: "  ₹50,000 / $600",
+      description: "For businesses needing advanced functionality and a polished online",
       features: [
-        "API Development",
-        "Database Integration",
-        "Authentication & Authorization",
-        "Data Management",
+        "Up to 10 pages",
+        "Custom frontend development (React.js)",
+        "Backend API integration (Node.js)",
+        "User authentication system (login, signup)",
+        "Custom forms, file upload capabilities",
+        "Enhanced SEO, analytics, and performance optimization",
+        "E-commerce functionality (optional)",
+        "Delivery time: 20-30 days",
       ],
       popular: true,
     },
     {
-      name: "Fullstack Development",
-      price: "$10",
-      description: "Complete end-to-end solutions for web applications.",
+      name: "Standard Website",
+      price: "₹22,000 / $249",
+      description: "For businesses wanting a more established online presence",
       features: [
-        "Frontend & Backend Integration",
-        "Database Design & Management",
-        "Full API Support",
-        "Deployment & Maintenance",
+        "Up to 5 pages",
+        "Responsive web design",
+        "Basic SEO & analytics setup",
+        "Contact form + Social media integration",
+        "Image gallery or product catalog",
+        "Blog setup (optional)",
+        "Delivery time: 10-14 days",
       ],
       popular: false,
     },
+    {
+      name: "Add-Ons",
+      price: "₹5,000 / $60",
+      description: "Domain & Hosting",
+      features: [
+        "Get a custom domain and reliable hosting to make your website live",
+        "Domain registration (1-year)",
+        "Hosting setup with SSL certificate",
+        "1 year of hosting included",
+        "Delivery time: 1-2 days",
+      ],
+      popular: false,
+    }
+
   ];
 
   return (
     <section id="price" className="bg-[#0D1413]">
-      <h1 className="text-center py-8 text-3xl text-white font-semibold ">WEB PACKAGES</h1>
+      <h1 className="text-center py-20 px-8 text-3xl text-white font-semibold ">Services that work for you, prices that make sense. <br /> <span className="text-[#1FA887]">See our packages today </span></h1>
       <div className="flex flex-col md:flex-row justify-center items-center gap-8 p-8 bg-[#0D1413]">
 
         {plans.map((plan, index) => (
 
           <div
             key={index}
-            className={`relative max-w-xs w-full rounded-lg shadow-lg p-6 text-center transition-transform duration-300 hover:scale-105 ${plan.popular ? "bg-[#1FA887] text-[white]" : "bg-white text-gray-800"
+            className={`relative max-w-xs w-full rounded-lg shadow-lg p-6 text-center transition-transform  duration-300 hover:scale-105 ${plan.popular ? "bg-[#1FA887] text-[white]" : "bg-white text-gray-800"
               }`}
           >
             {plan.popular && (
@@ -385,7 +413,7 @@ const WebSolutionsPricing = () => {
             )}
             <h2 className="text-2xl font-semibold mt-4">{plan.name}</h2>
             <p className="text-lg italic mb-4">{plan.description}</p>
-            <p className="text-4xl font-bold my-4">{plan.price}<sub className="font-[600] opacity-50">/hr</sub></p>
+            <p className="text-4xl font-bold my-4">{plan.price}</p>
             <ul className="space-y-2 mb-6">
               {plan.features.map((feature, idx) => (
                 <li key={idx} className="text-sm">
@@ -407,6 +435,57 @@ const WebSolutionsPricing = () => {
     </section>
   );
 }
+
+const Contact = () => (
+  <section id="contact" className="w-full py-12 px-8">
+    <div className="contact-container">
+      <div className="contact-heading text-gray-300">
+        <h1 className="font-bold text-2xl  uppercase">
+          <span className="text-[#1FA887]"> Get in Touch with Us</span>
+        </h1>
+        <p className="lowercase pt-4">
+          We’re here to help you bring your ideas to life, Whether you
+          have a question, want to discuss a project,
+          or need assistance, don’t<br /> hesitate to reach out. We’d love to hear from you and
+          help you build something amazing!
+        </p>
+      </div>
+    </div>
+    <div className="links flex flex-col justify-center items-center w-full py-4">
+      <div className="part-one w-full">
+        <form className="max-w-xl w-full mx-auto py-12 text-white">
+          <div className="form-group mb-4">
+            <label htmlFor="number" className="block mb-1 font-bold text-lg">
+              Phone:
+            </label>
+            <input type="text" id="phone" name="phone" placeholder="Enter mobile number" className="w-full p-2 outline-none border border-[#1FA887] text-[#333]" />
+          </div>
+          <div className="form-group mb-4">
+            <label htmlFor="email" className="block mb-1 font-bold text-lg">
+              Email:
+            </label>
+            <input type="email" id="email" name="email" placeholder="Enter Email" required className="w-full p-2 outline-none border border-[#1FA887]  text-[#333]" />
+          </div>
+          <div className="form-group mb-4">
+            <label htmlFor="socialLink" className="block mb-1 font-bold text-lg">
+              Social Media:
+            </label>
+            <input type="text" id="socialLink" name="socialLink" placeholder="Enter Social Link" required className="w-full p-2 outline-none border border-[#1FA887]  text-[#333]" />
+          </div>
+          {/* <div className="form-group mb-4">
+            <label htmlFor="message" className="block mb-1 font-bold text-lg">
+              Message:
+            </label>
+            <textarea id="message" name="message" rows="4" className="w-full p-2 outline-none border border-[#1FA887] resize-y  text-[#333]"></textarea>
+          </div> */}
+          <div className="form-group">
+            <input type="submit" value="Submit" className="w-full p-2 rounded-md font-bold text-black uppercase cursor-pointer bg-[#1FA887] transition duration-300 ease-in-out hover:bg-gray-300 hover:text-[#333]" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+);
 
 const Footer = () => (
   <footer className="text-white bg-[#0D1413] text-center ">

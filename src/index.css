@@ -8,10 +8,15 @@
 
 }
 
-.link-container li:hover {
+.link-contianer li:hover {
     color: #1FA887;
 }
-
+.list_content ol{
+    margin-top: 20px;
+}
+.list_content ol span{
+    margin-top: 10px;
+}
 
   
   /* START RESPONSIVE */
@@ -65,5 +70,13 @@
    .team_card{
     width: 100%;
     /* padding: 20px; */
+   }
+
+   .hero_intro{
+    padding-left: 0px;
+    padding-right: 0px;
+   }
+   .hero_intro_text{
+    font-size: 1.8rem;
    }
 } 
