@@ -222,18 +222,13 @@ const Portfolio = () => (
         link={"https://silisalon.vercel.app/"}
       />
 
-      <ProjectCard title="Profile store"
-        imageUrl={ProfileStore}
-        description="A profile stroe website.
-        "
-        link={"https://profile-store-mini-social-media.onrender.com/profiles"}
-      />
       <ProjectCard
         title="Landing Page"
         imageUrl={landingPage}
         description="A landing page"
         link={"https://landing-page-coral-mu.vercel.app/"}
       />
+
       <ProjectCard title="Two Good.Co"
         imageUrl={togood}
         description="An e-commerce platform designed to boost sales and improve user experience.
@@ -241,17 +236,26 @@ const Portfolio = () => (
         link={"https://two-good-co-sigma.vercel.app/"}
       />
 
-      <ProjectCard title="Movies4U"
-        imageUrl={movies4u}
-        description="A  video streaming web app."
-        link={"https://movies4-u-sage.vercel.app/"}
-      />
       <ProjectCard
         title="Amazon Clone"
         imageUrl={Amazon}
         description="An e-commerce platform designed to boost sales and improve user experience."
         link={"https://amazon-five-amber.vercel.app/"}
       />
+
+      <ProjectCard title="Movies4U"
+        imageUrl={movies4u}
+        description="A  video streaming web app."
+        link={"https://movies4-u-sage.vercel.app/"}
+      />
+
+      <ProjectCard title="Profile store"
+        imageUrl={ProfileStore}
+        description="A profile stroe website.
+        "
+        link={"https://profile-store-mini-social-media.onrender.com/profiles"}
+      />
+
 
     </div>
   </section>
@@ -347,22 +351,7 @@ const WebSolutionsPricing = () => {
       ],
       popular: false,
     },
-    {
-      name: "Premium Website",
-      price: "  ₹50,000 / $600",
-      description: "For businesses needing advanced functionality and a polished online",
-      features: [
-        "Up to 10 pages",
-        "Custom frontend development (React.js)",
-        "Backend API integration (Node.js)",
-        "User authentication system (login, signup)",
-        "Custom forms, file upload capabilities",
-        "Enhanced SEO, analytics, and performance optimization",
-        "E-commerce functionality (optional)",
-        "Delivery time: 20-30 days",
-      ],
-      popular: true,
-    },
+   
     {
       name: "Standard Website",
       price: "₹22,000 / $249",
@@ -377,6 +366,22 @@ const WebSolutionsPricing = () => {
         "Delivery time: 10-14 days",
       ],
       popular: false,
+    },
+     {
+      name: "Premium Website",
+      price: "  ₹50,000 / $600",
+      description: "For businesses needing advanced functionality and a polished online",
+      features: [
+        "Up to 10 pages",
+        "Custom frontend development (React.js)",
+        "Backend API integration (Node.js)",
+        "User authentication system (login, signup)",
+        "Custom forms, file upload capabilities",
+        "Enhanced SEO, analytics, and performance optimization",
+        "E-commerce functionality (optional)",
+        "Delivery time: 20-30 days",
+      ],
+      popular: true,
     },
     {
       name: "Add-Ons",
@@ -522,7 +527,7 @@ const Footer = () => (
 
     <div className="footer w-full h-auto bg-black text-white overflow-hidden relative">
       <div className="footer_content w-full sm:w-[94%] m-auto h-full flex flex-col gap-6 sm:gap-8 relative">
-        <div className="footer_part1 h-auto sm:h-1/2 flex flex-col sm:flex-row items-start justify-between pt-20 pb-10 z-[1] px-5">
+        <div className="footer_part1 h-auto sm:h-1/2 flex flex-row sm:flex-row items-start justify-between pt-20 pb-10 z-[1] px-5">
           <div className="left_part text-left mb-6 sm:mb-0 ">
             <a href="#"><h1 className="text-lg sm:text-[1.4rem] leading-6 sm:leading-[1.8] font-medium">Home</h1></a>
             <a href="#services"><h1 className="text-lg sm:text-[1.4rem] leading-6 sm:leading-[1.8] font-medium">Services</h1></a>
@@ -533,7 +538,7 @@ const Footer = () => (
           <div className="middle_part text-left mb-6 sm:mb-0">
 
           </div>
-          <div className="right_part text-right">
+          <div className="right_part text-left">
             <a href="#testimonials">
               <h1 className="text-lg sm:text-[1.4rem] leading-6 sm:leading-[1.8] font-medium cursor-pointer">
                 Testimonials
