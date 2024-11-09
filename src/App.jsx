@@ -151,10 +151,10 @@ const Hero = () => (
     <div className="w-full  flex flex-col justify-center items-center gap-8">
 
       <div className="hero_intro text-left px-8 py-6">
-        <h1 className="hero_intro_text text-[3rem] leading-[2.8rem]"><span className="text-[10vw] tracking-tighter">In</span> a world that's going ditital, <br />your business should too.</h1>
+        <h1 className="hero_intro_text text-[3rem] leading-[2.8rem]"><span className="text-[10vw] tracking-tighter">In</span> a world that's going digital, <br />your business should too.</h1>
       </div>
       <div className="hero_intro text-right px-8 py-6">
-        <h1 className="hero_intro_text text-[3rem] leading-[2.8rem]">Invest once, and enjoy the benefits or our comprehensive digital solution.</h1>
+        <h1 className="hero_intro_text text-[3rem] leading-[2.8rem]">Invest once, and enjoy the benefits of our comprehensive digital solutions.</h1>
       </div>
     </div>
   </section>
