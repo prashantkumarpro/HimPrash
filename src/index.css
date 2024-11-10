@@ -67,6 +67,11 @@
     .priceing_card {
         align-items: center;
     }
+
+    .hero_intro_text {
+        font-size: 1.5rem;
+        line-height: 22px;
+    }
 }
 
 @media (max-width:550px) {

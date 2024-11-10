@@ -60,7 +60,7 @@ const Nav = () => {
 
 
   return (
-    <nav className="bg-[#0D1413] py-2 px-8 text-white sticky flex items-center justify-between top-0 z-10">
+    <nav className="nav_section bg-[#0D1413] py-2 px-8 text-white sticky flex items-center justify-between top-0 z-10">
       <div className="flex justify-between items-center">
         <div className="size-20 flex items-center">
           <a href="#"> <img
@@ -162,8 +162,8 @@ const Hero = () => (
 
 const AboutUsCard = () => {
   return (
-    <div className="flex items-center justify-center min-h-[100vh] bg-transparent p-6">
-      <div className=" w-[98%] rounded-2xl shadow-xl p-8 transform hover:scale-105 transition-transform duration-300">
+    <div className="about_section flex items-center justify-center min-h-[100vh] bg-transparent p-6">
+      <div className="about_card w-[98%] rounded-2xl shadow-xl p-8 transform hover:scale-105 transition-transform duration-300">
         <h2 className="text-3xl font-bold text-[#1FA887] mb-12 text-left">About Us</h2>
 
         <div className="flex items-center justify-center space-x-3 mb-12">
@@ -350,7 +350,7 @@ const WebSolutionsPricing = () => {
       ],
       popular: false,
     },
-   
+
     {
       name: "Standard Website",
       price: "₹22,000 / $249",
@@ -366,7 +366,7 @@ const WebSolutionsPricing = () => {
       ],
       popular: false,
     },
-     {
+    {
       name: "Premium Website",
       price: "  ₹50,000 / $600",
       description: "For businesses needing advanced functionality and a polished online",
@@ -401,7 +401,7 @@ const WebSolutionsPricing = () => {
   return (
     <section id="price" className="bg-[#0D1413]">
       <h1 className="text-center py-20 px-8 text-3xl text-white font-semibold ">Services that work for you, prices that make sense. <br /> <span className="text-[#1FA887]">See our packages today </span></h1>
-      <div className="flex flex-col md:flex-row justify-center items-start gap-8 p-8 bg-[#0D1413]">
+      <div className="pricing_card flex flex-col md:flex-row justify-center items-start gap-8 p-8 bg-[#0D1413]">
 
         {plans.map((plan, index) => (
 
@@ -476,7 +476,7 @@ const Contact = () => (
             </label>
             <input type="text" id="socialLink" name="socialLink" placeholder="Enter Social Link" required className="w-full p-2 outline-none border border-[#1FA887]  text-[#333]" />
           </div>
-    
+
           <div className="form-group">
             <input type="submit" value="Submit" className="w-full p-2 rounded-md font-bold text-black uppercase cursor-pointer bg-[#1FA887] transition duration-300 ease-in-out hover:bg-gray-300 hover:text-[#333]" />
           </div>
