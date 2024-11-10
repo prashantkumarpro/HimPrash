@@ -63,7 +63,8 @@
         top: 14px;
         color: white;
     }
-    .priceing_card{
+
+    .priceing_card {
         align-items: center;
     }
 }
@@ -138,7 +139,7 @@
         padding-right: 16px;
     }
 
-    .priceing_card{
+    .priceing_card {
         padding-left: 0;
         padding-right: 0;
     }

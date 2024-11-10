@@ -6,7 +6,6 @@ import togood from './assets/togood.png'
 import siliSalon from './assets/silisalon.png'
 import ProfileStore from './assets/ProfileStore.jpg'
 import landingPage from './assets/LandingPage.png'
-import PrashantImg from './assets/Prashant.png'
 import movies4u from './assets/movies4u.png'
 import { TfiLinkedin } from "react-icons/tfi";
 import { FaArrowUp, FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
@@ -402,7 +401,7 @@ const WebSolutionsPricing = () => {
   return (
     <section id="price" className="bg-[#0D1413]">
       <h1 className="text-center py-20 px-8 text-3xl text-white font-semibold ">Services that work for you, prices that make sense. <br /> <span className="text-[#1FA887]">See our packages today </span></h1>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-8 p-8 bg-[#0D1413]">
+      <div className="flex flex-col md:flex-row justify-center items-start gap-8 p-8 bg-[#0D1413]">
 
         {plans.map((plan, index) => (
 
@@ -477,12 +476,7 @@ const Contact = () => (
             </label>
             <input type="text" id="socialLink" name="socialLink" placeholder="Enter Social Link" required className="w-full p-2 outline-none border border-[#1FA887]  text-[#333]" />
           </div>
-          {/* <div className="form-group mb-4">
-            <label htmlFor="message" className="block mb-1 font-bold text-lg">
-              Message:
-            </label>
-            <textarea id="message" name="message" rows="4" className="w-full p-2 outline-none border border-[#1FA887] resize-y  text-[#333]"></textarea>
-          </div> */}
+    
           <div className="form-group">
             <input type="submit" value="Submit" className="w-full p-2 rounded-md font-bold text-black uppercase cursor-pointer bg-[#1FA887] transition duration-300 ease-in-out hover:bg-gray-300 hover:text-[#333]" />
           </div>
