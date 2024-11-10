@@ -84,7 +84,7 @@ const BackendCard = () => {
         </div>
       </div>
       <a href='#contact' className="block text-2xl bg-[#27E0B3] text-black font-semibold py-4 text-center cursor-pointer hover:bg-[#1FA887]">
-        Contect Us
+        Contact Us
       </a>
     </div>
   );
@@ -133,7 +133,7 @@ const FullStackCard = () => {
       </div>
 
       <a href='#contact' className="block text-2xl bg-[#27E0B3] text-black font-semibold py-4  text-center cursor-pointer hover:bg-[#1FA887]">
-        Contect Us
+        Contact Us
       </a>
     </div>
   );

@@ -6,6 +6,7 @@ import togood from './assets/togood.png'
 import siliSalon from './assets/silisalon.png'
 import ProfileStore from './assets/ProfileStore.jpg'
 import landingPage from './assets/LandingPage.png'
+import PrashantImg from './assets/Prashant.png'
 import movies4u from './assets/movies4u.png'
 import { TfiLinkedin } from "react-icons/tfi";
 import { FaArrowUp, FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
@@ -60,7 +61,7 @@ const Nav = () => {
 
 
   return (
-    <nav className="nav_section bg-[#0D1413] py-2 px-8 text-white sticky flex items-center justify-between top-0 z-10">
+    <nav className="bg-[#0D1413] py-2 px-8 text-white sticky flex items-center justify-between top-0 z-10">
       <div className="flex justify-between items-center">
         <div className="size-20 flex items-center">
           <a href="#"> <img
@@ -150,10 +151,10 @@ const Hero = () => (
     <div className="w-full  flex flex-col justify-center items-center gap-8">
 
       <div className="hero_intro text-left px-8 py-6">
-        <h1 className="hero_intro_text text-[3rem] leading-[2.8rem]"><span className="text-[10vw] tracking-tighter">In</span> a world that's going ditital, <br />your business should too.</h1>
+        <h1 className="hero_intro_text text-[3rem] leading-[2.8rem]"><span className="text-[10vw] tracking-tighter">In</span> a world that's going digital, <br />your business should too.</h1>
       </div>
       <div className="hero_intro text-right px-8 py-6">
-        <h1 className="hero_intro_text text-[3rem] leading-[2.8rem]">Invest once, and enjoy the benefits or our comprehensive digital solution.</h1>
+        <h1 className="hero_intro_text text-[3rem] leading-[2.8rem]">Invest once, and enjoy the benefits of our comprehensive digital solutions.</h1>
       </div>
     </div>
   </section>
@@ -162,8 +163,8 @@ const Hero = () => (
 
 const AboutUsCard = () => {
   return (
-    <div className="about_section flex items-center justify-center min-h-[100vh] bg-transparent p-6">
-      <div className="about_card w-[98%] rounded-2xl shadow-xl p-8 transform hover:scale-105 transition-transform duration-300">
+    <div className="flex items-center justify-center min-h-[100vh] bg-transparent p-6">
+      <div className=" w-[98%] rounded-2xl shadow-xl p-8 transform hover:scale-105 transition-transform duration-300">
         <h2 className="text-3xl font-bold text-[#1FA887] mb-12 text-left">About Us</h2>
 
         <div className="flex items-center justify-center space-x-3 mb-12">
@@ -221,18 +222,13 @@ const Portfolio = () => (
         link={"https://silisalon.vercel.app/"}
       />
 
-      <ProjectCard title="Profile store"
-        imageUrl={ProfileStore}
-        description="A profile stroe website.
-        "
-        link={"https://profile-store-mini-social-media.onrender.com/profiles"}
-      />
       <ProjectCard
         title="Landing Page"
         imageUrl={landingPage}
         description="A landing page"
         link={"https://landing-page-coral-mu.vercel.app/"}
       />
+
       <ProjectCard title="Two Good.Co"
         imageUrl={togood}
         description="An e-commerce platform designed to boost sales and improve user experience.
@@ -240,17 +236,26 @@ const Portfolio = () => (
         link={"https://two-good-co-sigma.vercel.app/"}
       />
 
-      <ProjectCard title="Movies4U"
-        imageUrl={movies4u}
-        description="A  video streaming web app."
-        link={"https://movies4-u-sage.vercel.app/"}
-      />
       <ProjectCard
         title="Amazon Clone"
         imageUrl={Amazon}
         description="An e-commerce platform designed to boost sales and improve user experience."
         link={"https://amazon-five-amber.vercel.app/"}
       />
+
+      <ProjectCard title="Movies4U"
+        imageUrl={movies4u}
+        description="A  video streaming web app."
+        link={"https://movies4-u-sage.vercel.app/"}
+      />
+
+      <ProjectCard title="Profile store"
+        imageUrl={ProfileStore}
+        description="A profile stroe website.
+        "
+        link={"https://profile-store-mini-social-media.onrender.com/profiles"}
+      />
+
 
     </div>
   </section>
@@ -346,22 +351,7 @@ const WebSolutionsPricing = () => {
       ],
       popular: false,
     },
-    {
-      name: "Premium Website",
-      price: "₹50,000 / $600",
-      description: "For businesses needing advanced functionality and a polished online",
-      features: [
-        "Up to 10 pages",
-        "Custom frontend development (React.js)",
-        "Backend API integration (Node.js)",
-        "User authentication system (login, signup)",
-        "Custom forms, file upload capabilities",
-        "Enhanced SEO, analytics, and performance optimization",
-        "E-commerce functionality (optional)",
-        "Delivery time: 20-30 days",
-      ],
-      popular: true,
-    },
+   
     {
       name: "Standard Website",
       price: "₹22,000 / $249",
@@ -376,6 +366,22 @@ const WebSolutionsPricing = () => {
         "Delivery time: 10-14 days",
       ],
       popular: false,
+    },
+     {
+      name: "Premium Website",
+      price: "  ₹50,000 / $600",
+      description: "For businesses needing advanced functionality and a polished online",
+      features: [
+        "Up to 10 pages",
+        "Custom frontend development (React.js)",
+        "Backend API integration (Node.js)",
+        "User authentication system (login, signup)",
+        "Custom forms, file upload capabilities",
+        "Enhanced SEO, analytics, and performance optimization",
+        "E-commerce functionality (optional)",
+        "Delivery time: 20-30 days",
+      ],
+      popular: true,
     },
     {
       name: "Add-Ons",
@@ -396,7 +402,7 @@ const WebSolutionsPricing = () => {
   return (
     <section id="price" className="bg-[#0D1413]">
       <h1 className="text-center py-20 px-8 text-3xl text-white font-semibold ">Services that work for you, prices that make sense. <br /> <span className="text-[#1FA887]">See our packages today </span></h1>
-      <div className="priceing_card flex flex-col md:flex-row justify-center items-start gap-8 p-8 bg-[#0D1413]">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-8 p-8 bg-[#0D1413]">
 
         {plans.map((plan, index) => (
 
@@ -521,7 +527,7 @@ const Footer = () => (
 
     <div className="footer w-full h-auto bg-black text-white overflow-hidden relative">
       <div className="footer_content w-full sm:w-[94%] m-auto h-full flex flex-col gap-6 sm:gap-8 relative">
-        <div className="footer_part1 h-auto sm:h-1/2 flex flex-col sm:flex-row items-start justify-between pt-20 pb-10 z-[1] px-5">
+        <div className="footer_part1 h-auto sm:h-1/2 flex flex-row sm:flex-row items-start justify-between pt-20 pb-10 z-[1] px-5">
           <div className="left_part text-left mb-6 sm:mb-0 ">
             <a href="#"><h1 className="text-lg sm:text-[1.4rem] leading-6 sm:leading-[1.8] font-medium">Home</h1></a>
             <a href="#services"><h1 className="text-lg sm:text-[1.4rem] leading-6 sm:leading-[1.8] font-medium">Services</h1></a>
@@ -532,7 +538,7 @@ const Footer = () => (
           <div className="middle_part text-left mb-6 sm:mb-0">
 
           </div>
-          <div className="right_part text-right">
+          <div className="right_part text-left">
             <a href="#testimonials">
               <h1 className="text-lg sm:text-[1.4rem] leading-6 sm:leading-[1.8] font-medium cursor-pointer">
                 Testimonials
