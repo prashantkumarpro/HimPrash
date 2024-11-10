@@ -163,6 +163,7 @@ const SolutionsCard = () => {
         <div className="w-full md:w-1/3 p-2">
           <FullStackCard />
         </div>
+       
       </div>
     </>
   );

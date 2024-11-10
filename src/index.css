@@ -11,15 +11,17 @@
 .link-contianer li:hover {
     color: #1FA887;
 }
-.list_content ol{
+
+.list_content ol {
     margin-top: 20px;
 }
-.list_content ol span{
+
+.list_content ol span {
     margin-top: 10px;
 }
 
-  
-  /* START RESPONSIVE */
+
+/* START RESPONSIVE */
 @media (max-width:770px) {
     .hero_section {
         padding: 80px 20px;
@@ -61,22 +63,83 @@
         top: 14px;
         color: white;
     }
+    .priceing_card{
+        align-items: center;
+    }
 }
 
- @media (max-width:550px) {
-    #team{
+@media (max-width:550px) {
+
+    .nav_section {
+        padding-left: 0rem;
+        padding-right: 1rem;
+    }
+
+    #team {
         padding: 20px;
     }
-   .team_card{
-    width: 100%;
-    /* padding: 20px; */
-   }
 
-   .hero_intro{
-    padding-left: 0px;
-    padding-right: 0px;
-   }
-   .hero_intro_text{
-    font-size: 1.8rem;
-   }
-} 
+    .team_card {
+        width: 100%;
+        /* padding: 20px; */
+    }
+
+    .hero_section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero_intro {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero_intro_text {
+        font-size: 1.3rem;
+        line-height: 20px;
+    }
+
+    #services {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 1.2rem;
+        line-height: 1.25rem;
+    }
+
+    .about_section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .about_card {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    #testimonials {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    #testimonials h2 {
+        font-size: 1.3rem;
+    }
+
+    #price {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    #price h1 {
+        text-align: left;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .priceing_card{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

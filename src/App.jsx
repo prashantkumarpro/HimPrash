@@ -6,7 +6,6 @@ import togood from './assets/togood.png'
 import siliSalon from './assets/silisalon.png'
 import ProfileStore from './assets/ProfileStore.jpg'
 import landingPage from './assets/LandingPage.png'
-import PrashantImg from './assets/Prashant.png'
 import movies4u from './assets/movies4u.png'
 import { TfiLinkedin } from "react-icons/tfi";
 import { FaArrowUp, FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
@@ -61,7 +60,7 @@ const Nav = () => {
 
 
   return (
-    <nav className="bg-[#0D1413] py-2 px-8 text-white sticky flex items-center justify-between top-0 z-10">
+    <nav className="nav_section bg-[#0D1413] py-2 px-8 text-white sticky flex items-center justify-between top-0 z-10">
       <div className="flex justify-between items-center">
         <div className="size-20 flex items-center">
           <a href="#"> <img
@@ -163,8 +162,8 @@ const Hero = () => (
 
 const AboutUsCard = () => {
   return (
-    <div className="flex items-center justify-center min-h-[100vh] bg-transparent p-6">
-      <div className=" w-[98%] rounded-2xl shadow-xl p-8 transform hover:scale-105 transition-transform duration-300">
+    <div className="about_section flex items-center justify-center min-h-[100vh] bg-transparent p-6">
+      <div className="about_card w-[98%] rounded-2xl shadow-xl p-8 transform hover:scale-105 transition-transform duration-300">
         <h2 className="text-3xl font-bold text-[#1FA887] mb-12 text-left">About Us</h2>
 
         <div className="flex items-center justify-center space-x-3 mb-12">
@@ -349,7 +348,7 @@ const WebSolutionsPricing = () => {
     },
     {
       name: "Premium Website",
-      price: "  ₹50,000 / $600",
+      price: "₹50,000 / $600",
       description: "For businesses needing advanced functionality and a polished online",
       features: [
         "Up to 10 pages",
@@ -397,7 +396,7 @@ const WebSolutionsPricing = () => {
   return (
     <section id="price" className="bg-[#0D1413]">
       <h1 className="text-center py-20 px-8 text-3xl text-white font-semibold ">Services that work for you, prices that make sense. <br /> <span className="text-[#1FA887]">See our packages today </span></h1>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-8 p-8 bg-[#0D1413]">
+      <div className="priceing_card flex flex-col md:flex-row justify-center items-start gap-8 p-8 bg-[#0D1413]">
 
         {plans.map((plan, index) => (
 
