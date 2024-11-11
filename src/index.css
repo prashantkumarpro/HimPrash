@@ -85,7 +85,11 @@
         padding: 20px;
     }
 
-   
+    .team_card {
+        overflow: hidden;
+        width: 98%;
+        /* padding: 20px; */
+    }
 
     .hero_section {
         padding-left: 16px;
@@ -150,7 +154,8 @@
         font-size: 1.875rem;
         line-height: 2.25rem;
     }
-    .price_card{
+
+    .price_card {
         width: 100%;
     }
 }

@@ -60,7 +60,7 @@ const Nav = () => {
 
 
   return (
-    <nav className="nav_section bg-[#0D1413] py-2 px-8 text-white sticky flex items-center justify-between top-0 z-10  shadow-xl">
+    <nav className="nav_section bg-[#0D1413] py-2 px-8 text-white sticky flex items-center justify-between top-0 z-10  shadow-xl border-b-white border-b-[0.5px]">
       <div className="flex justify-between items-center">
         <div className="size-20 flex items-center">
           <a href="#"> <img
