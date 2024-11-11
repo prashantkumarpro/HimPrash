@@ -64,7 +64,7 @@
         color: white;
     }
 
-    .priceing_card {
+    .pricing_card {
         align-items: center;
     }
 
@@ -85,10 +85,7 @@
         padding: 20px;
     }
 
-    .team_card {
-        width: 100%;
-        /* padding: 20px; */
-    }
+   
 
     .hero_section {
         padding-left: 16px;
@@ -147,5 +144,13 @@
     .priceing_card {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .amount {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+    }
+    .price_card{
+        width: 100%;
     }
 }

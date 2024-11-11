@@ -60,7 +60,7 @@ const Nav = () => {
 
 
   return (
-    <nav className="nav_section bg-[#0D1413] py-2 px-8 text-white sticky flex items-center justify-between top-0 z-10">
+    <nav className="nav_section bg-[#0D1413] py-2 px-8 text-white sticky flex items-center justify-between top-0 z-10  shadow-xl">
       <div className="flex justify-between items-center">
         <div className="size-20 flex items-center">
           <a href="#"> <img
@@ -319,8 +319,8 @@ const Team = () => (
 );
 
 const TeamCard = ({ name, role, description, imageUrl }) => (
-  <div className="team_card bg-white text-black  rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105  w-[512px] p-6 h-54 flex justify-between items-center gap-5">
-    <div className="w-1/4 rounded-full overflow-hidden bg-black">
+  <div className="team_card bg-white text-black  rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105  w-[420px] p-6 h-54 flex justify-between items-center gap-5">
+    <div className="w-1/3 rounded-full overflow-hidden bg-black">
       <img src={imageUrl} alt={name} className="w-full h-full object-cover " />
     </div>
     <div className="text-left">
@@ -407,7 +407,7 @@ const WebSolutionsPricing = () => {
 
           <div
             key={index}
-            className={`relative max-w-xs w-full rounded-lg shadow-lg p-6 text-center transition-transform  duration-300 hover:scale-105 ${plan.popular ? "bg-[#1FA887] text-[white]" : "bg-white text-gray-800"
+            className={`price_card relative max-w-sm w-full rounded-lg shadow-lg p-6 text-center transition-transform  duration-300 hover:scale-105 ${plan.popular ? "bg-[#1FA887] text-[white]" : "bg-white text-gray-800"
               }`}
           >
             {plan.popular && (
@@ -417,7 +417,7 @@ const WebSolutionsPricing = () => {
             )}
             <h2 className="text-2xl font-semibold mt-4">{plan.name}</h2>
             <p className="text-lg italic mb-4">{plan.description}</p>
-            <p className="text-4xl font-bold my-4">{plan.price}</p>
+            <p className="amount text-3xl font-bold my-4">{plan.price}</p>
             <ul className="space-y-2 mb-6">
               {plan.features.map((feature, idx) => (
                 <li key={idx} className="text-sm">
