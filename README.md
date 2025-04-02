@@ -3,19 +3,6 @@
 ## Overview
 himPrash Web Solution is a freelancing brand specializing in web development services. Built using **React.js** and **Tailwind CSS**, the platform provides modern, scalable, and responsive web solutions to businesses and individuals.
 
-## Screenshots
-
-### Desktop View  
-![image](https://github.com/user-attachments/assets/c0f37233-95c5-4220-bb3c-d11857655c55)
-
-### Tablet View 
- ![image](https://github.com/user-attachments/assets/166c40b7-0dcd-4aaf-b0cf-23df87679fb5)
- 
-### Mobile View  
-![image](https://github.com/user-attachments/assets/28a8c1d4-85b9-4d97-b432-1bedf79e89a4)
-
-
-
 ## Features
 - **Custom Web Development** – Tailored solutions to meet client needs.
 - **Modern Tech Stack** – Developed using React.js for dynamic user interfaces and Tailwind CSS for sleek, responsive designs.
@@ -58,6 +45,17 @@ himPrash Web Solution is a freelancing brand specializing in web development ser
 - Adding more automation for project management.
 - Expanding services to mobile app development.
 - Creating a blog section for tech updates and case studies.
+
+## Screenshots
+
+### Desktop View  
+![image](https://github.com/user-attachments/assets/c0f37233-95c5-4220-bb3c-d11857655c55)
+
+### Tablet View 
+ ![image](https://github.com/user-attachments/assets/166c40b7-0dcd-4aaf-b0cf-23df87679fb5)
+ 
+### Mobile View  
+![image](https://github.com/user-attachments/assets/28a8c1d4-85b9-4d97-b432-1bedf79e89a4)
 
 ## License
 This project is open-source and available under the [MIT License](LICENSE).
