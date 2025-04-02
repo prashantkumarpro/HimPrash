@@ -12,7 +12,8 @@ himPrash Web Solution is a freelancing brand specializing in web development ser
  ![image](https://github.com/user-attachments/assets/166c40b7-0dcd-4aaf-b0cf-23df87679fb5)
  
 ### Mobile View  
-![Mobile Screenshot](screenshots/mobile.png)
+![image](https://github.com/user-attachments/assets/28a8c1d4-85b9-4d97-b432-1bedf79e89a4)
+
 
 
 ## Features
